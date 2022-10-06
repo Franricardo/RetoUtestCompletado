@@ -1,0 +1,316 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/font/bootstrap-icons.css"><!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.11.3/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.11.3/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.11.3/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle"></span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="08d9d6b0cee357b37cd8db464a18dab353db62dfebe63ec37b0da8352175f6d5.html">Registro De Usuario En La Plataforma Utest.</a></span>
+                > <span class="truncate-60"><a
+                    href="9402267cb84e0937d12d61f422f3ff974e9aea3698aaba53feeb59d39a9dc690.html">Registro de Ricardo en Utest </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 06-10-2022 08:46</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Registro De Usuario En La Plataforma Utest. </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="ff1312023d39bfe017bf1cfa7eee688f5343ffeb07241e1c0d6e56a450ede02c.html">
+                                    (Scenario)</a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="8e3b9bd5eba0a2d944ce7d2a73335e57289cd25f71e556e1618e946dc87d7ec9.html">Stories
+                                    (tag)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Registro de Ricardo en Utest
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="7e7e8b5779633738234ab0098b2fdeb0ce12e6603399b60b372cb26594801c71.png" title=" Given Ricardo quiere registrarse en la plataforma de Utest" width="1034"/>
+                <img src="7e7e8b5779633738234ab0098b2fdeb0ce12e6603399b60b372cb26594801c71.png" title=" Ricardo abrir pagina utest" width="1034"/>
+                <img src="7e7e8b5779633738234ab0098b2fdeb0ce12e6603399b60b372cb26594801c71.png" title=" Ricardo opens the Pagina utest" width="1034"/>
+                <img src="befbcf6f21491c94979e2f50c21db1fb5fbe91b01614f120f17384c76eeb3383.png" title=" Ricardo clicks on Boton ir a pagina registro" width="1034"/>
+                <img src="44b98f05e75788edd1cdee05b3f1e6381e77e91bba6f102a85507cac7f1919a8.png" title=" Ricardo clicks on Boton ir a pagina registro (completed)" width="1034"/>
+                <img src="44b98f05e75788edd1cdee05b3f1e6381e77e91bba6f102a85507cac7f1919a8.png" title=" Ricardo abrir pagina utest (completed)" width="1034"/>
+                <img src="a1396771f79157f74408a3bc820e724a7b5fad595df68dcc15470ec54bf9dc79.png" title=" Given Ricardo quiere registrarse en la plataforma de Utest (completed)" width="1034"/>
+                <img src="94dcc2b1b8f495ce02c07319ed95bdcb17208331e8d0111163638d47477dfad4.png" title=" When El usuario ingresa toda la informaci&oacute;n requerida por la pagina
+| strNombre | strApellido | strEmail | strMesNacimiento | strDiaNacimiento | strAnoNacimiento | strCiudad | strZIP | strPais | strDispositivoMovil | strModeloMovil | strSistemaOperativoMovil | strClave |
+| Ricardo | Herrera | frangheri@utest.com | June | 27 | 1995 | La Chorrera | 507 | Panama | Apple | iphone 4 | iOS 11.1.2 | Turke0633. |" width="1034"/>
+                <img src="94dcc2b1b8f495ce02c07319ed95bdcb17208331e8d0111163638d47477dfad4.png" title=" Ricardo llenar" width="1034"/>
+                <img src="4da3bca9000323c4525c91d0aec43e8b9f9be0e789e5cf77aaee3883837dbb85.png" title=" Ricardo enters 'Ricardo' into Primer nombre" width="1034"/>
+                <img src="e8cf9f93c05583a95275a4b5b024355d1f096fdc6c961aceb4f670a210697163.png" title=" Ricardo enters 'Ricardo' into Primer nombre (completed)" width="1034"/>
+                <img src="e8cf9f93c05583a95275a4b5b024355d1f096fdc6c961aceb4f670a210697163.png" title=" Ricardo enters 'Herrera' into Apellido" width="1034"/>
+                <img src="f9ae683d4151780a8208ff9f2a8f74295188a7e075c094b1957275fb32f3e7a4.png" title=" Ricardo enters 'Herrera' into Apellido (completed)" width="1034"/>
+                <img src="d0d91b1b4f8863853fe6b7092028480b540891550af4a52d38937abb047d3194.png" title=" Ricardo enters 'frangheri@utest.com' into Email" width="1034"/>
+                <img src="28525e569ea41e12bf20a3c7288993f4edb8b2cf25c10b9d20d62a178fa1486d.png" title=" Ricardo enters 'frangheri@utest.com' into Email (completed)" width="1034"/>
+                <img src="28525e569ea41e12bf20a3c7288993f4edb8b2cf25c10b9d20d62a178fa1486d.png" title=" Ricardo selects June on Mes de nacimiento" width="1034"/>
+                <img src="0391339bc296c9c7a208ed6bd39c2ca44ccd6f24e4643e9d7167598818ca6f11.png" title=" Ricardo selects June on Mes de nacimiento (completed)" width="1034"/>
+                <img src="0391339bc296c9c7a208ed6bd39c2ca44ccd6f24e4643e9d7167598818ca6f11.png" title=" Ricardo selects 27 on Dia de nacimiento" width="1034"/>
+                <img src="e87762493fcda8f5788c6b9385de4ca7e35f1492e4e983f1b0e38321ebb6104a.png" title=" Ricardo selects 27 on Dia de nacimiento (completed)" width="1034"/>
+                <img src="e87762493fcda8f5788c6b9385de4ca7e35f1492e4e983f1b0e38321ebb6104a.png" title=" Ricardo selects 1995 on Ano de nacimiento" width="1034"/>
+                <img src="5684a3bbe74ec02d8063786af4648d2a00def292b3ebf1232104b67fc5e8e9a2.png" title=" Ricardo selects 1995 on Ano de nacimiento (completed)" width="1034"/>
+                <img src="5684a3bbe74ec02d8063786af4648d2a00def292b3ebf1232104b67fc5e8e9a2.png" title=" Ricardo clicks on Boton para dirigir a la seccion de direcci&oacute;n " width="1034"/>
+                <img src="9c5af41a6ba03866924d7b31859f4e6233eb46f02f5398a8f2d08dd6129481e2.png" title=" Ricardo clicks on Boton para dirigir a la seccion de direcci&oacute;n  (completed)" width="1034"/>
+                <img src="9c5af41a6ba03866924d7b31859f4e6233eb46f02f5398a8f2d08dd6129481e2.png" title=" Ricardo llenar (completed)" width="1034"/>
+                <img src="857e3c970a8a9ab9627d52978fde57489ce99a3b7b47ea25cc7ebe634af9fc78.png" title=" Ricardo llenar direccion" width="1034"/>
+                <img src="adc7fe4b0e3e184a2c9b84c3fe6479754feb6595e7d83b7f8f61b32c185b54e1.png" title=" Ricardo enters 'La Chorrera' into Ciudad" width="1034"/>
+                <img src="b03f508b2f657995b8cb25d0283467e5ca35661229eb346d9a84a6705e7d4f60.png" title=" Ricardo enters 'La Chorrera' into Ciudad (completed)" width="1034"/>
+                <img src="11d4bd06973e64973846c521603920ab0f59abd4757a47c226039f35be687595.png" title=" Ricardo types 'ARROW_DOWN' in Ciudad" width="1034"/>
+                <img src="da6c78776a92ea227113c951541822b42e0186af170ce3980482818541d0d395.png" title=" Ricardo types 'ARROW_DOWN' in Ciudad (completed)" width="1034"/>
+                <img src="da6c78776a92ea227113c951541822b42e0186af170ce3980482818541d0d395.png" title=" Ricardo types 'ENTER' in Ciudad" width="1034"/>
+                <img src="425f9881c03f52cf20d52e6a9599cca199914069c4080a365433a0d48d58897b.png" title=" Ricardo types 'ENTER' in Ciudad (completed)" width="1034"/>
+                <img src="425f9881c03f52cf20d52e6a9599cca199914069c4080a365433a0d48d58897b.png" title=" Ricardo enters '507' into Codigo postal" width="1034"/>
+                <img src="17aa22aa5eecc548ce01e17a7f2d9fb657c59fd35e1daf29fc0db4fee11b96b5.png" title=" Ricardo enters '507' into Codigo postal (completed)" width="1034"/>
+                <img src="17aa22aa5eecc548ce01e17a7f2d9fb657c59fd35e1daf29fc0db4fee11b96b5.png" title=" Ricardo clicks on Contenedor de pais" width="1034"/>
+                <img src="81e825b17d746d1d05d6bc514cf2ee487f7814e26cf97c05fbfcb3408d1d3a79.png" title=" Ricardo clicks on Contenedor de pais (completed)" width="1034"/>
+                <img src="81e825b17d746d1d05d6bc514cf2ee487f7814e26cf97c05fbfcb3408d1d3a79.png" title=" Ricardo enters 'Panama' then hits ARROW_DOWN and ENTER into Pais" width="1034"/>
+                <img src="ba3f043b5ad13be4f5435be7336e8e893cab4ee0c4c8d032d1be3f8b0ed5a7e6.png" title=" Ricardo enters 'Panama' then hits ARROW_DOWN and ENTER into Pais (completed)" width="1034"/>
+                <img src="ba3f043b5ad13be4f5435be7336e8e893cab4ee0c4c8d032d1be3f8b0ed5a7e6.png" title=" Ricardo clicks on Boton de dirigirse a la seccion de dispositivos" width="1034"/>
+                <img src="30d611cb6fe1be7f58bd062b1e2205986062737b6a5cfc28bffdc85e6d132910.png" title=" Ricardo clicks on Boton de dirigirse a la seccion de dispositivos (completed)" width="1034"/>
+                <img src="30d611cb6fe1be7f58bd062b1e2205986062737b6a5cfc28bffdc85e6d132910.png" title=" Ricardo llenar direccion (completed)" width="1034"/>
+                <img src="2dd0448f2c7755ba2c6ff0dcf450c620cfdea8b7b2fb7486f4942c81c732eab5.png" title=" Ricardo llenar dispositivos" width="1034"/>
+                <img src="db3d18704b4ca49e036ed97034953a183bec15e7a77acb1a3ae34768631e1839.png" title=" Ricardo clicks on Contenedor de dispositivos" width="1034"/>
+                <img src="dca8efbfd242263b2bc79e6ed3840f3736e432bcd3b346ca956949781dd7c9b6.png" title=" Ricardo clicks on Contenedor de dispositivos (completed)" width="1034"/>
+                <img src="dca8efbfd242263b2bc79e6ed3840f3736e432bcd3b346ca956949781dd7c9b6.png" title=" Ricardo enters 'Apple' then hits ARROW_DOWN and ENTER into Dispositivo movil" width="1034"/>
+                <img src="8b6547b70fa1f3b04f22cc9e36d41abaaee624879127b9e9e4e87b6edda74de8.png" title=" Ricardo enters 'Apple' then hits ARROW_DOWN and ENTER into Dispositivo movil (completed)" width="1034"/>
+                <img src="8b6547b70fa1f3b04f22cc9e36d41abaaee624879127b9e9e4e87b6edda74de8.png" title=" Ricardo clicks on Contenedor de los modelos de movil" width="1034"/>
+                <img src="4393408733ec6f3d0969e567eb6648b3bc0a7b267d31d8eed2504aee1de75ccc.png" title=" Ricardo clicks on Contenedor de los modelos de movil (completed)" width="1034"/>
+                <img src="4393408733ec6f3d0969e567eb6648b3bc0a7b267d31d8eed2504aee1de75ccc.png" title=" Ricardo enters 'iphone 4' then hits ARROW_DOWN and ENTER into Modelo del movil" width="1034"/>
+                <img src="9107b13d40eb3d5503e8a7b0baac23f8cc76a51c75f2a64821d89860af398afa.png" title=" Ricardo enters 'iphone 4' then hits ARROW_DOWN and ENTER into Modelo del movil (completed)" width="1034"/>
+                <img src="9107b13d40eb3d5503e8a7b0baac23f8cc76a51c75f2a64821d89860af398afa.png" title=" Ricardo clicks on Contenedor del sistema operativo" width="1034"/>
+                <img src="0b27710b77baf2af132ae9e8483450ed619eabd15cb7c003c4de23bd8e84311e.png" title=" Ricardo clicks on Contenedor del sistema operativo (completed)" width="1034"/>
+                <img src="0b27710b77baf2af132ae9e8483450ed619eabd15cb7c003c4de23bd8e84311e.png" title=" Ricardo enters 'iOS 11.1.2' then hits ARROW_DOWN and ENTER into Los sistemas operativos" width="1034"/>
+                <img src="f9dab9ddca018c10ed04a26fbfc56e923442ea7092b1d9e1ff8aa95444286c60.png" title=" Ricardo enters 'iOS 11.1.2' then hits ARROW_DOWN and ENTER into Los sistemas operativos (completed)" width="1034"/>
+                <img src="f9dab9ddca018c10ed04a26fbfc56e923442ea7092b1d9e1ff8aa95444286c60.png" title=" Ricardo clicks on Botton que lleva al paso final" width="1034"/>
+                <img src="6d50dad4fbc876fa1388b8a9c7e48df1af798a4fd8a82a2ba9b0770b97f5b679.png" title=" Ricardo clicks on Botton que lleva al paso final (completed)" width="1034"/>
+                <img src="73527634f9f14a226fe0adcf51db21f28d06c542175beb4d99c2b08083a01d35.png" title=" Ricardo llenar dispositivos (completed)" width="1034"/>
+                <img src="bf77f4edb5ed3e2a3fbb2ab34098cdb5e700525deb77d845b7c7f6993742e1bc.png" title=" Ricardo llenar final" width="1034"/>
+                <img src="bf77f4edb5ed3e2a3fbb2ab34098cdb5e700525deb77d845b7c7f6993742e1bc.png" title=" Ricardo enters 'Turke0633.' into Clave de usuario" width="1034"/>
+                <img src="552142c536c156bbdc1b8087c417e7a93382fe7ef72b75cb1ab9e630dd1b7a99.png" title=" Ricardo enters 'Turke0633.' into Clave de usuario (completed)" width="1034"/>
+                <img src="6cc265d00fab0197effbcb00c645f84d175150813c630a24246b0e62e1e21dad.png" title=" Ricardo enters 'Turke0633.' into Confirmacion de la clave de usuario" width="1034"/>
+                <img src="c5be558d70d13cd1d7104db3773b5f18a6fec2cc3d7e4cc7c14e6f2958bbcfa2.png" title=" Ricardo enters 'Turke0633.' into Confirmacion de la clave de usuario (completed)" width="1034"/>
+                <img src="c5be558d70d13cd1d7104db3773b5f18a6fec2cc3d7e4cc7c14e6f2958bbcfa2.png" title=" Ricardo clicks on Caja de texto 01" width="1034"/>
+                <img src="1eb4100c0ea1cc0af28af976b45c9ef1118571875a700a0d2dcf935d1629f0d7.png" title=" Ricardo clicks on Caja de texto 01 (completed)" width="1034"/>
+                <img src="1eb4100c0ea1cc0af28af976b45c9ef1118571875a700a0d2dcf935d1629f0d7.png" title=" Ricardo clicks on Caja de texto 02" width="1034"/>
+                <img src="101dbcb6a13c2764b5b2bb5e782830c8d831248ecc39d35669a25b79944c20ab.png" title=" Ricardo clicks on Caja de texto 02 (completed)" width="1034"/>
+                <img src="101dbcb6a13c2764b5b2bb5e782830c8d831248ecc39d35669a25b79944c20ab.png" title=" Ricardo clicks on Caja de texto 03" width="1034"/>
+                <img src="6c7e2d9381e6a69f55554c86c48cb69957c42338edc63996a3630b33015c800b.png" title=" Ricardo clicks on Caja de texto 03 (completed)" width="1034"/>
+                <img src="6c7e2d9381e6a69f55554c86c48cb69957c42338edc63996a3630b33015c800b.png" title=" Ricardo clicks on Boton para terminar el registro del usuario" width="1034"/>
+                <img src="0c3745856cde05c247b8557adc429adff06177a9d68968a1dcfdf3198491d873.png" title=" Ricardo clicks on Boton para terminar el registro del usuario (completed)" width="1034"/>
+                <img src="0c3745856cde05c247b8557adc429adff06177a9d68968a1dcfdf3198491d873.png" title=" Ricardo llenar final (completed)" width="1034"/>
+                <img src="754dec8ba84bc4b629eee44f71da2bab7633a460fe519102b73e24e7bc2b6e16.png" title=" When El usuario ingresa toda la informaci&oacute;n requerida por la pagina
+| strNombre | strApellido | strEmail | strMesNacimiento | strDiaNacimiento | strAnoNacimiento | strCiudad | strZIP | strPais | strDispositivoMovil | strModeloMovil | strSistemaOperativoMovil | strClave |
+| Ricardo | Herrera | frangheri@utest.com | June | 27 | 1995 | La Chorrera | 507 | Panama | Apple | iphone 4 | iOS 11.1.2 | Turke0633. | (completed)" width="1034"/>
+                <img src="2af2da37de1d86108fec2e6269348a3b7bbe3a93f270d3fd1e109ffaaf0cae5d.png" title=" Then El registro se completa cuando aparece el boton Complete Setup
+| strTextoFinal |
+| Complete Setup |" width="1034"/>
+                <img src="2af2da37de1d86108fec2e6269348a3b7bbe3a93f270d3fd1e109ffaaf0cae5d.png" title=" Then responder" width="1034"/>
+                <img src="b2523e2b9f09dbbbad0e7fa4807e6b5dc03b339f1c29953c2832c8cfb8ebf521.png" title=" Then responder (completed)" width="1034"/>
+                <img src="b2523e2b9f09dbbbad0e7fa4807e6b5dc03b339f1c29953c2832c8cfb8ebf521.png" title=" Then El registro se completa cuando aparece el boton Complete Setup
+| strTextoFinal |
+| Complete Setup | (completed): <span class='success-color'>SUCCESS</span>" width="1034"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 3.1.13</span>
+</div>
+</body>
+</html>
